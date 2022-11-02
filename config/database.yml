@@ -81,6 +81,8 @@ test:
 #
 production:
   <<: *default
-  database: concert_buddy_production
-  username: concert_buddy
-  password: <%= ENV["CONCERT_BUDDY_DATABASE_PASSWORD"] %>
+  # database: concert_buddy_production
+  # username: concert_buddy
+  # password: <%= ENV["CONCERT_BUDDY_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
