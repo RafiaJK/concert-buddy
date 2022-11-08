@@ -6,7 +6,9 @@ import SignUp from './SignUp';
 import LoginForm from './LoginForm';
 import ContactForm from './ContactForm';
 import Navbar from './Navbar';
-
+import Profile from './Profile';
+import ArtistContainer from './ArtistContainer';
+import ShowContainer from './ShowContainer';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -20,6 +22,22 @@ function App() {
     });
   }, []);
 
+  const [artists, setArtists] = useState([])
+
+  useEffect (() => { 
+      fetch("/artists")
+      .then((r)=>r.json())
+      .then(setArtists);
+  }, [])
+
+  const [shows, setShows] = useState([])
+  useEffect (() => { 
+    fetch("/shows")
+    .then((r)=>r.json())
+    .then(setShows);
+  }, [])
+
+
   return (
     <BrowserRouter>
       <Navbar user={user} setUser={setUser} />
@@ -31,18 +49,25 @@ function App() {
               <Route exact path="/">
               </Route>
 
-              <Route path="/contact">
-
+              <Route path="/profile">
+                <Profile/>  
               </Route>
 
+              <Route exact path="/artists">
+                <ArtistContainer artists={artists}/>
+              </Route>
+
+              <Route exact path="/shows">
+                <ShowContainer shows={shows}/>
+              </Route>
 
             </Switch>
           ) : (
             <Switch>
               <Route exact path="/signup">
                 <SignUp setUser={setUser}/>
-                <ContactForm/>
               </Route>
+
               <Route exact path="/login">
                  <LoginForm setUser={setUser}/>
               </Route>

@@ -1,3 +1,4 @@
 class ContactSerializer < ActiveModel::Serializer
-  attributes :id, :photo, :bio, :email, :instagram, :twitter
+  attributes :id, :user_id, :photo, :bio, :email, :instagram, :twitter
+  belongs_to :user
 end

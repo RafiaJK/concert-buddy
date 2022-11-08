@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ContactForm from "./ContactForm";
 
 function SignUp({ setUser }) {
     const [username, setUsername] = useState("");
@@ -25,6 +27,7 @@ function SignUp({ setUser }) {
     }
   
     return (
+    <div>
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <label htmlFor="username">Username:</label>
@@ -50,6 +53,15 @@ function SignUp({ setUser }) {
         />
         <button type="submit">Sign Up</button>
       </form>
+
+        <Route exact path="/profile">
+            <ContactForm/>
+        </Route>
+
+      </div>
+
+      
+
     );
   }
 

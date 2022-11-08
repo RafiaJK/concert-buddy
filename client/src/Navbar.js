@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 function Navbar({user, setUser}) {
 
     function handleLogoutClick() {
@@ -16,17 +17,21 @@ function Navbar({user, setUser}) {
         <br/>
 
         {user ? (
+        <>
           <button onClick={handleLogoutClick}>Logout</button>
+          <nav>
+          <Link to="/">Home </Link>
+          <Link to="/profile">Update Profile</Link>
+          <Link to="/artists">Artists</Link>
+          <Link to="/shows">Find A Show</Link>
+            </nav>
+        </> 
         ) : (
           <>
             <Link to="/signup">Signup</Link>
             <Link to="/login">Login</Link>
           </>
         )}
-      <nav>
-        <Link to="/">Home </Link>
-        <Link to="/contact">Update Profile</Link>
-      </nav>
 
     </header>
   );

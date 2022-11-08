@@ -1,3 +1,4 @@
 class ShowSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id,:artist_id, :venue, :date
+  belongs_to :artist
 end

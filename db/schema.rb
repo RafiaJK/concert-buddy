@@ -35,7 +35,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_07_000847) do
   create_table "shows", force: :cascade do |t|
     t.string "venue"
     t.date "date"
-    t.integer "user_id"
     t.integer "artist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

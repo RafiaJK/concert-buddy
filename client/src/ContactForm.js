@@ -35,9 +35,16 @@ function ContactForm({updateContacts, addContact}) {
         });
     }
 
+    const [contacts, setContacts] = useState([])
+
+    function updateContacts(newContact) {
+        const contactToAdd = { ...newContact, id: updateContacts.length + 1 }
+        setContacts([...contacts], contactToAdd)
+    }
+
     return (
         <div className="contact-form">
-            <h2>Add Your Info</h2>
+            <h2></h2>
             <form onSubmit={addContact}>
                  <input onChange={handleChange} value={formInput.bio} type="text" name="bio" placeholder="Bio" />
                  <input onChange={handleChange} value={formInput.photo} type="text" name="photo" placeholder="photo" />

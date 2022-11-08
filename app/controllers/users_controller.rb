@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    #before_action :authorize, only: [:show]
+    skip_before_action :authorize, only: :create
+    #skip_before_action :verify_authenticity_token, only: :create
     #GET
     def index
         users = User.all
@@ -9,7 +10,11 @@ class UsersController < ApplicationController
     #GET 
     def show
         user = User.find_by(id: session[:user_id])
-        render json: user
+        if user
+            render json: user
+        else
+            render json: {error: "Not authorized"}, status: :unauthorized
+        end
     end
 
     def me
@@ -30,15 +35,14 @@ class UsersController < ApplicationController
         end
     end
 
-    def authorize
-        return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
-    end
+    # def authorize
+    #     return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
+    # end
 
     #password not password digest bc coming from the frontend
     def user_params
         params.permit(:username, :password, :password_confirmation)
       end
-
 
 
     #DELETE
