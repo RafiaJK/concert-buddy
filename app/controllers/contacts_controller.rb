@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
         contact = Contact.find_by(id: session[:user_id])
         if contact
             contact.update(user_id: session[:user_id], bio: params[:bio], photo: params[:photo], email: params[:email], instagram: params[:instagram], twitter: params[:twitter] )
-            render json: review, status: :ok
+            render json: contact, status: :ok
         else
             render json: {error: "Info Not Found"}, status: :not_found
         end

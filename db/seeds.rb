@@ -42,6 +42,12 @@ Show.create(venue: "Terminal 5", date: "2022-12-01", artist_id: 4)
 Show.create(venue: "Kings Theatre", date: "2022-11-26", artist_id: 6)
 Show.create(venue: "Brooklyn Steel", date: "2022-11-27", artist_id: 7)
 
+Showlist.create(user_id: 1, show_id: 1)
+Showlist.create(user_id: 1, show_id: 2)
+Showlist.create(user_id: 1, show_id: 3)
+Showlist.create(user_id: 1, show_id: 4)
+
+
 User.create(username: "Rafia", password_digest: "Rafia")
 
 Contact.create(user_id: 1, bio: "hi", photo: "", email: "rafiajk@aol.com", instagram: "rafiajk", twitter: "rafiajkay")

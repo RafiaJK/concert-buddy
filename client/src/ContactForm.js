@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useHistory} from "react-router-dom";
 
 function ContactForm({updateContacts, addContact}) {
     const [formInput, setFormInput] = useState({
@@ -21,9 +22,12 @@ function ContactForm({updateContacts, addContact}) {
         twitter: formInput.twitter
     }
 
+    const history = useHistory();
+
     function addContact(e) {
         e.preventDefault()
         updateContacts(newContact)
+        history.push('/profile');
 
         fetch('/contacts', {
             method: 'POST',

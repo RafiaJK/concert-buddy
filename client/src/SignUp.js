@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import ContactForm from "./ContactForm";
 
 function SignUp({ setUser }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
+
+    const history = useHistory();
   
     function handleSubmit(e) {
       e.preventDefault();
+      history.push('/welcome');
+
       fetch("/signup", {
         method: "POST",
         headers: {
@@ -54,9 +58,9 @@ function SignUp({ setUser }) {
         <button type="submit">Sign Up</button>
       </form>
 
-        <Route exact path="/profile">
-            <ContactForm/>
-        </Route>
+        {/* <Route exact path="/welcome">
+            {/* <ContactForm/>
+        </Route> */}
 
       </div>
 

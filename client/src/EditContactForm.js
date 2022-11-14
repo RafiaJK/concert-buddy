@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-function EditContactForm(){
+function EditContactForm({contact}){
     //EDIT CURRENT CONTACT INFO
     const [editedContact, setEditedContact] = useState(contact)
 
@@ -17,7 +17,5 @@ function EditContactForm(){
         setEditedContact(editedContact)
       }
 }
-
-
 
     export default EditContactForm;

@@ -9,6 +9,7 @@ import Navbar from './Navbar';
 import Profile from './Profile';
 import ArtistContainer from './ArtistContainer';
 import ShowContainer from './ShowContainer';
+import Welcome from './Welcome';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -59,6 +60,10 @@ function App() {
 
               <Route exact path="/shows">
                 <ShowContainer shows={shows}/>
+              </Route>
+
+              <Route exact path="/welcome">
+                <Welcome/>
               </Route>
 
             </Switch>

@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #route to test config
   get '/hello', to: 'application#hello_world'
   post "/signup", to: "users#create"
-  #post "/signup", to: "contacts#create" #figure out
+  post "/welcome", to: "contacts#create" 
 
   post "/login", to: "sessions#create"
   delete "/logout", to: "sessions#destroy"
@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get "/auth", to: "users#show"
   patch "/contacts/:id", to: "contacts#update"
   #get "/shows", to: " "
+
+  get "/shows", to: "showlists#create"
+  get "/showlists", to: "showlists#show"
 
   get "/artists", to: "artists#show"
 
