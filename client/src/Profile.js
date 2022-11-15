@@ -14,28 +14,11 @@ function Profile() {
             setContact(data)
           });
       }, []);
-      
+
+      //console.log(contact)
+
     const {photo, bio, email, instagram, twitter} = contact
     //console.log(contact.contact===undefined)
-
-
-
-    //EDIT CURRENT CONTACT INFO
-    // const [editedContact, setEditedContact] = useState(contact)
-
-    // function editContact(e) {
-    //     e.preventDefault()
-    
-    //     fetch(`/${contact.id}`, {
-    //       method: "PATCH",
-    //       headers: {
-    //         "Accept": "application/json",
-    //         "Content-Type": "application/json"
-    //       },
-    //       body: JSON.stringify(editedContact),
-    //     });
-    //     setEditedContact(editedContact)
-    //   }
 
     return (
         <div>
@@ -47,9 +30,13 @@ function Profile() {
             {contact.contact!==undefined ? 
                 <h4>Instagram: @{contact.contact.instagram} | Twitter: @{contact.contact.twitter} | Email: {contact.contact.email}</h4>
               : null}
+          
+          <EditContactForm contact={contact}/>
 
-          <EditContactForm/>
+              <h3>View Your Shows:</h3>
 
+              <h4>Delete Your Account</h4>
+  
         </div>
     );
 }

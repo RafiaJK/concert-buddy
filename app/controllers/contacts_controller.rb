@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+    skip_before_action :authorize, only: [:index, :create, :show, :update]
+
     #GET
     def index
         contacts = Contact.all
@@ -7,8 +9,8 @@ class ContactsController < ApplicationController
 
     #GET 
     def show
-        user = Contact.find_by(id: session[:user_id])
-        render json: user
+        contact = Contact.find_by(id: session[:user_id])
+        render json: contact
     end
 
     #CREATE
@@ -18,8 +20,9 @@ class ContactsController < ApplicationController
     end
 
     #PATCH
-    def update
-        contact = Contact.find_by(id: session[:user_id])
+    def edit
+        # contact = Contact.find_by(id: session[:user_id])
+        contact = Contact.find_by(user_id: params[:id])
         if contact
             contact.update(user_id: session[:user_id], bio: params[:bio], photo: params[:photo], email: params[:email], instagram: params[:instagram], twitter: params[:twitter] )
             render json: contact, status: :ok

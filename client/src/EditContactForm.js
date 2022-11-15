@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
-function EditContactForm({ contact }) {
+function EditContactForm({contact}) {
   //EDIT CURRENT CONTACT INFO
   const [editedContact, setEditedContact] = useState(contact)
 
+  //console.log("trying to edit", contact)
+
   function editContact(e) {
     e.preventDefault()
-    // fetch(`/${contact.id}/edit`, {
-    fetch(`/contact`, {
+    // fetch(`/${contact.id}/`, {
+    // fetch(`/contacts/${contact.user_id}/`, {
+      fetch(`/contacts/${contact.id}`, {
       method: "PATCH",
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(editedContact),
+      body: JSON.stringify(formInput)
     });
-    setEditedContact(editedContact)
+    //setEditedContact(editedContact)
   }
 
   function handleChange(e) {
@@ -29,7 +32,6 @@ function EditContactForm({ contact }) {
     twitter: ""
   })
 
-  console.log(formInput)
 
   return (
     <div className="contact-form">

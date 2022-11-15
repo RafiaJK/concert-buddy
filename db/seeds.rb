@@ -47,8 +47,9 @@ Showlist.create(user_id: 1, show_id: 2)
 Showlist.create(user_id: 1, show_id: 3)
 Showlist.create(user_id: 1, show_id: 4)
 
-
 User.create(username: "Rafia", password_digest: "Rafia")
+User.create(username: "Bella", password_digest: "taylor")
+User.create(username: "Leona", password_digest: "strawberry")
 
 Contact.create(user_id: 1, bio: "hi", photo: "", email: "rafiajk@aol.com", instagram: "rafiajk", twitter: "rafiajkay")
 
