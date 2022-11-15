@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :shows
-  resources :contacts, only: [:index, :show, :create, :edit]
+  resources :contacts, only: [:index, :show, :create, :edit, :destroy]
   resources :artists
   resources :users
 
@@ -23,8 +23,9 @@ Rails.application.routes.draw do
 
   get "/profile", to: "users#show"
   get "/auth", to: "users#show"
-  # patch "/contacts/:id", to: "contacts#edit"
   patch "/contacts/:id", to: "contacts#edit"
+
+  delete "/users/:id", to: "users#destroy"
 
   #get "/shows", to: " "
 

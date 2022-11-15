@@ -3,12 +3,8 @@ function EditContactForm({contact}) {
   //EDIT CURRENT CONTACT INFO
   const [editedContact, setEditedContact] = useState(contact)
 
-  //console.log("trying to edit", contact)
-
   function editContact(e) {
     e.preventDefault()
-    // fetch(`/${contact.id}/`, {
-    // fetch(`/contacts/${contact.user_id}/`, {
       fetch(`/contacts/${contact.id}`, {
       method: "PATCH",
       headers: {

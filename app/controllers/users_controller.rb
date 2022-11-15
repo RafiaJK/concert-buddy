@@ -35,6 +35,17 @@ class UsersController < ApplicationController
         end
     end
 
+    #DELETE
+    def destroy
+        user = User.find_by(id: session[:user_id])
+        if user
+            user.destroy
+            render json: {}, status: :ok 
+        else
+            render json: {error: "User Not Found"}, status: :not_found
+        end
+    end
+
     # def authorize
     #     return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
     # end
@@ -45,14 +56,5 @@ class UsersController < ApplicationController
       end
 
 
-    #DELETE
-    def destroy
-        user = User.find_by(id: params[:id])
-        if user
-            user.destroy
-            render json: {}, status: :ok 
-        else
-            render json: {error: "User Not Found"}, status: :not_found
-        end
-    end
+
 end

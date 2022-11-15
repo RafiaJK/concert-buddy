@@ -21,13 +21,23 @@ class ContactsController < ApplicationController
 
     #PATCH
     def edit
-        # contact = Contact.find_by(id: session[:user_id])
         contact = Contact.find_by(user_id: params[:id])
         if contact
             contact.update(user_id: session[:user_id], bio: params[:bio], photo: params[:photo], email: params[:email], instagram: params[:instagram], twitter: params[:twitter] )
             render json: contact, status: :ok
         else
             render json: {error: "Info Not Found"}, status: :not_found
+        end
+    end
+
+    #DESTROY
+    def destroy
+        contact = Contact.find_by(id: params[:id])
+        if contact
+            contact.destroy
+            render json: {}, status: :ok 
+        else
+            render json: {error: "Contact Not Found"}, status: :not_found
         end
     end
 

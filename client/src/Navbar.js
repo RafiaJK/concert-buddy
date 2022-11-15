@@ -8,7 +8,8 @@ function Navbar() {
 
 
     function handleLogoutClick() {
-      fetch("/logout", { method: "DELETE" })
+      fetch("/logout", { 
+        method: "DELETE" })
       .then((r) => {
         if (r.ok) {
           setUser(null);

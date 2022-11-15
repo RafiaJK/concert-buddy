@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import EditContactForm from "./EditContactForm";
 import UserContext from "./UserContext";
 
@@ -15,10 +15,15 @@ function Profile() {
           });
       }, []);
 
-      //console.log(contact)
 
     const {photo, bio, email, instagram, twitter} = contact
-    //console.log(contact.contact===undefined)
+
+    const history = useHistory();
+    function handleDeleteUser() {
+      fetch(`users/${user.id}`, { 
+        method: "DELETE" })
+        history.push('/signup')
+    }
 
     return (
         <div>
@@ -36,7 +41,7 @@ function Profile() {
               <h3>View Your Shows:</h3>
 
               <h4>Delete Your Account</h4>
-  
+                <button onClick={handleDeleteUser}>DELETE</button>
         </div>
     );
 }

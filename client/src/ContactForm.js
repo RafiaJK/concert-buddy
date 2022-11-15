@@ -30,7 +30,7 @@ function ContactForm({updateContacts, addContact}) {
     function addContact(e) {
         e.preventDefault()
         updateContacts(newContact)
-        history.push('/profile');
+        history.push('/home');
 
         fetch('/contacts', {
             method: 'POST',

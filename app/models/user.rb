@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
 
-    has_one :contact
+    has_one :contact, dependent: :destroy
     has_many :showlists
     has_many :shows, through: :showlists
 
