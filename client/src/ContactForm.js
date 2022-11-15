@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {useHistory} from "react-router-dom";
+import UserContext from './UserContext';
 
 function ContactForm({updateContacts, addContact}) {
+    const { user, setUser } = useContext(UserContext)
+
     const [formInput, setFormInput] = useState({
         bio: "",
         photo: "",

@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   get "/profile", to: "users#show"
   get "/auth", to: "users#show"
-  patch "/contacts/:id", to: "contacts#update"
+  patch "/contacts/:id/edit", to: "contacts#edit"
   #get "/shows", to: " "
 
   get "/shows", to: "showlists#create"

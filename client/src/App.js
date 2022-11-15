@@ -4,18 +4,23 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import SignUp from './SignUp';
 import LoginForm from './LoginForm';
-import ContactForm from './ContactForm';
 import Navbar from './Navbar';
 import Profile from './Profile';
 import ArtistContainer from './ArtistContainer';
 import ShowContainer from './ShowContainer';
 import Welcome from './Welcome';
+import UserContext from './UserContext';
+import UsernameContext from './UsernameContext';
+import PasswordContext from './PasswordContext';
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState("")
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
 
+
+  // auto-login
   useEffect(() => {
-    // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -24,7 +29,6 @@ function App() {
   }, []);
 
   const [artists, setArtists] = useState([])
-
   useEffect (() => { 
       fetch("/artists")
       .then((r)=>r.json())
@@ -41,9 +45,13 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar user={user} setUser={setUser} />
+      <UserContext.Provider value={{ user, setUser }}>
+      <UsernameContext.Provider value={{ username, setUsername }}>
+      <PasswordContext.Provider value={{ password, setPassword }}>
 
-      <main>
+      <Navbar  />
+
+      <div>
           {user ? ( 
             <Switch>
 
@@ -77,9 +85,12 @@ function App() {
                  <LoginForm setUser={setUser}/>
               </Route>
             </Switch>
-          )}
+            )} 
 
-      </main> 
+      </div> 
+      </PasswordContext.Provider>
+      </UsernameContext.Provider>
+      </UserContext.Provider>
     </BrowserRouter>
   );
 }

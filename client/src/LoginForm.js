@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-function LoginForm({ setUser }) {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [login, setLogin] = useState("")
-    const [errors, setErrors] = useState([])
+import React, { useState, useContext } from "react";
+import UserContext from "./UserContext";
+import UsernameContext from "./UsernameContext";
+import PasswordContext from "./PasswordContext"
+
+function LoginForm() {
+  const { user, setUser } = useContext(UserContext)
+  const {username, setUsername} = useContext(UsernameContext) 
+  const {password, setPassword} = useContext(PasswordContext) 
+  const [login, setLogin] = useState("")
+  const [errors, setErrors] = useState([])
 
 
     function handleSubmit(e) {
@@ -23,6 +28,8 @@ function LoginForm({ setUser }) {
     
 
     return (
+      <>
+      <h2>Login</h2>
         <form onSubmit={handleSubmit}>
             <label> Username 
                 <input type="text" value={username}
@@ -35,6 +42,7 @@ function LoginForm({ setUser }) {
             </label>
             <button type="submit"> Login </button>
         </form>
+      </>
     );
 }
 

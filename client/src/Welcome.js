@@ -1,7 +1,10 @@
+import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ContactForm from "./ContactForm";
+import UserContext from "./UserContext";
 
 function Welcome(){
+    const {user, setUser} = useContext(UserContext) 
 
     return (
         <>
