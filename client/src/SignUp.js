@@ -2,6 +2,8 @@ import { useState, useContext } from "react";
 import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import ContactForm from "./ContactForm";
 import UserContext from "./UserContext";
+import { Link } from "react-router-dom";
+
 
 function SignUp() {
   const { user, setUser } = useContext(UserContext)
@@ -34,33 +36,40 @@ function SignUp() {
   }
 
   return (
-    <div>
+    <div className="signup">
+      <div className="rectangle"></div>
+      <h2 className="signup-welcome">Sign up to start!</h2>
+      <h4 className="login-enter-details">Please enter your details.</h4>
+
       <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
-        <label htmlFor="username">Username:</label>
+        <label className="signup-username" htmlFor="username">Username:
         <input
           type="text"
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="password">Password:</label>
+        /></label>
+
+        <label className="signup-password" htmlFor="password">Password:
         <input
           type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-        />
-        <label htmlFor="password_confirmation">Confirm Password:</label>
+        /></label>
+
+        <label className="signup-passwordconfirm" htmlFor="password_confirmation">Confirm Password:
         <input
           type="password"
           id="password_confirmation"
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
-        />
-        <button type="submit">Sign Up</button>
-      </form>
+        /></label>
 
+        <button className="signup-button" type="submit">Sign up now!</button>
+      </form>
+      <p className="signup-haveaccount-login">Already have an account?  <Link to="/login">Log in</Link> now!</p>
+      <div className="signup-logo"> </div>
     </div>
 
   );

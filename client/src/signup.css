@@ -1,0 +1,127 @@
+.signup{
+    color:white;
+    position: fixed;
+    min-height: 100%;
+    min-width:1024px;
+    width: 100%;
+    height: auto;
+    left:0;
+    top:0;
+    background: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/LoginSignupBackground.png);
+}
+
+.signup-logo{
+    position:relative;
+    width:auto;
+    height: 30%;
+    max-height: 250px;
+
+    left: 11.88%;
+    right: 60.35%;
+    top: 144px;
+    bottom: 171px;
+content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-expanded.png);
+}
+
+.signup-welcome{
+    position: absolute;
+    width: 269px;
+    height: 49px;
+    left: 1007px;
+    top: 191px;
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
+
+color: #FFFFFF;
+}
+
+.signup-username{
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 11px 0px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 48px;
+left: 939px;
+top: 452px;
+border-bottom: 1px solid #E0E0E0;
+}
+
+.signup-password{
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 11px 0px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 48px;
+left: 939px;
+top: 515px;
+border-bottom: 1px solid #E0E0E0;
+}
+
+.signup-passwordconfirm{
+box-sizing: border-box;
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 11px 0px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 48px;
+left: 935px;
+top: 578px;
+
+border-bottom: 1px solid #E0E0E0;
+}
+
+.signup-button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 36px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 60px;
+left: 939px;
+top: 705px;
+
+background: #060606;
+color: white;
+border-radius: 6px;
+font-size: large;
+
+}
+
+.signup-haveaccount-login{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 297px;
+    height: 20px;
+    left: 998px;
+    top: 781px;
+}

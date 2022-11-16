@@ -1,21 +1,27 @@
 /* Login Page */
 .login {
 color:white;
-position: absolute;
-width: 1920px;
-height: 1028px;
-left: -151px;
-top: -56px;
+position: fixed;
+min-height: 100%;
+min-width:1024px;
+width: 100%;
+height: auto;
+left:0;
+top:0;
 background: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/LoginSignupBackground.png);
 }
 
 .login-logo{
-    position: absolute;
-    width: 504px;
-    height: 192px;
-    left: 824px;
-    top: 96px;
-background: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo.png);
+    position:relative;
+    width:auto;
+    height: 30%;
+    max-height: 250px;
+
+    left: 11.88%;
+    right: 60.35%;
+    top: 144px;
+    bottom: 171px;
+content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-expanded.png);
 }
 
 .login-user{
@@ -29,7 +35,7 @@ gap: 8px;
 position: absolute;
 width: 430px;
 height: 48px;
-left: 839px;
+left: 939px;
 top: 497px;
 
 border-bottom: 1px solid #E0E0E0;
@@ -46,7 +52,7 @@ gap: 8px;
 position: absolute;
 width: 430px;
 height: 48px;
-left: 839px;
+left: 939px;
 top: 560px;
 
 border-bottom: 1px solid #E0E0E0;
@@ -64,7 +70,7 @@ gap: 8px;
 position: absolute;
 width: 430px;
 height: 60px;
-left: 839px;
+left: 939px;
 top: 705px;
 
 background: #060606;
@@ -75,32 +81,32 @@ font-size: large;
 
 .login-welcome{
     position: absolute;
-width: 269px;
-height: 49px;
-left: 919px;
-top: 288px;
-
-font-family: 'Manrope';
-font-style: normal;
-font-weight: 800;
-font-size: 36px;
-line-height: 49px;
+    width: 269px;
+    height: 49px;
+    left: 1007px;
+    top: 191px;
+    
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 49px;
 
 color: #FFFFFF;
 }
 
 .login-enter-details{
-position: absolute;
-width: 245px;
-height: 26px;
-left: 919px;
-top: 342px;
-
-font-family: 'Space Grotesk';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 26px;
+    position: absolute;
+    width: 245px;
+    height: 26px;
+    left: 1019px;
+    top: 252px;
+    
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
 color: #FFFFFF;
 }
 
@@ -114,7 +120,7 @@ gap: 8px;
 position: absolute;
 width: 312px;
 height: 20px;
-left: 898px;
+left: 998px;
 top: 781px;
 
 }
@@ -123,8 +129,7 @@ top: 781px;
     position: absolute;
     width: 728px;
     height: 1028px;
-    left: 712px;
+    left: 812px;
     top: 0px;
     background-image: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/LoginRectangleOverlay.png);
     }
-
