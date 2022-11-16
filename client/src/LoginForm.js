@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import UserContext from "./UserContext";
 import UsernameContext from "./UsernameContext";
 import PasswordContext from "./PasswordContext"
+import { Link } from "react-router-dom";
 
 function LoginForm() {
   const { user, setUser } = useContext(UserContext)
@@ -28,21 +29,26 @@ function LoginForm() {
     
 
     return (
-      <>
+      <div className="login">
       <h2>Login</h2>
+        <div className="rectangle"></div>
+        <div className="login-logo"></div>
+        <h2 className="login-welcome">Welcome back!</h2>
+        <h4 className="login-enter-details">Please enter your details.</h4>
         <form onSubmit={handleSubmit}>
-            <label> Username 
+            <label className="login-user"> Username 
                 <input type="text" value={username}
                 onChange={(e) => setUsername(e.target.value)}/>
             </label>
 
-            <label> Password 
+            <label className="login-password"> Password 
                 <input type="password" value={password}
                 onChange={(e) => setPassword(e.target.value)}/>
             </label>
-            <button type="submit"> Login </button>
+            <button className="login-button" type="submit"> Login </button>
         </form>
-      </>
+      <p className="login-noaccount-signup">Don’t have an account?  <Link to="/signup">Sign up</Link> for free!</p>
+      </div>
     );
 }
 

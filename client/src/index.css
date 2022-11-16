@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* .navbar{
+  background-color: black;
+  color:white;
+} */
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -58,3 +63,6 @@ code {
     width: calc(20% - 2rem);
   }
 }
+
+
+@import "login.css";
