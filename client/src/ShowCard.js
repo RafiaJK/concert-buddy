@@ -1,38 +1,39 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import UsernameContext from './UsernameContext';
+import UserContext from './UserContext';
+
 
 function ShowCard({ show, showlist }) {
   const { venue, date, artist_id } = show
-  //const {show_id} = showlist
-  //const [going, setGoing] = useState(show.going)
-  const [going, setGoing] = useState([])
+  const { user, setUser } = useContext(UserContext)
 
+  // const [going, setGoing] = useState([])
 
   const newShowlist = {
     show_id: show.id,
+    user_id: user.id
   }
-
-  // function handleGoing(){
-  //   setGoing((going) => !going)
-  //   fetch('/showlists',{
-  //     method:"PATCH",
-  //     headers:{"Content-Type": "application/json"},
-  //     body: JSON.stringify(newShowlist)
-  //   })
-  // }
 
   function handleShowlistClick(e) {
     e.preventDefault()
-    fetch('/showlists', {
+    updateShowlists(newShowlist)
+    fetch('users/showlists', {
       method: "POST",
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newShowlist),
+      body: JSON.stringify(newShowlist)
     });
   }
 
-  console.log(handleShowlistClick)
+  const [showlists, setShowlists] = useState([])
+  function updateShowlists(newShowlist) {
+    const showlistToAdd = { ...newShowlist, id: updateShowlists.length + 1 }
+    setShowlists([...showlists], showlistToAdd)
+}
+
+console.log(show.showlists)
 
   return (
     <li className="card">
@@ -40,11 +41,14 @@ function ShowCard({ show, showlist }) {
       <img src={show.artist.image} alt={"Artist Photo"} />
       <h2>{show.artist.name}</h2>
       <h4>{date}</h4>
-      {going? (
-        <button onClick={handleShowlistClick}className="primary">♥</button>
-      ) : (
+      {/* {going? ( */}
+        <button onClick={handleShowlistClick}className="primary">Add To My Shows</button>
+      {/* ) : (
         <button onClick={handleShowlistClick}>♡</button>
-      )}
+      )} */}
+
+      {/* <p>Attending: {show.showlists}</p> */}
+      
     </li>
   );
 

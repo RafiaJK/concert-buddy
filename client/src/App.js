@@ -42,6 +42,12 @@ function App() {
     .then(setShows);
   }, [])
 
+  // const [showlists, setShowlists] = useState([])
+  // useEffect (() => { 
+  //   fetch("/showlists")
+  //   .then((r)=>r.json())
+  //   .then(setShowlists);
+  // }, [])
 
   return (
     <BrowserRouter>
@@ -74,6 +80,9 @@ function App() {
                 <Welcome/>
               </Route>
 
+              <Route exact path="/showlists">
+              </Route>
+
             </Switch>
           ) : (
             <Switch>
@@ -85,7 +94,7 @@ function App() {
                  <LoginForm setUser={setUser}/>
               </Route>
             </Switch>
-            )} 
+          )} 
 
       </div> 
       </PasswordContext.Provider>

@@ -1,5 +1,5 @@
 class ShowlistsController < ApplicationController
-    skip_before_action :authorize, only: [:index, :show, :create]
+    skip_before_action :authorize, only: [:index, :create, :show, :update]
 
         #GET
         def index
@@ -10,23 +10,13 @@ class ShowlistsController < ApplicationController
         #GET 
         def show
             showlist = Showlist.find_by(id: session[:user_id])
-            if showlist
-                render json: showlist
-            else
-                render json: {error: "Not authorized"}, status: :unauthorized
-            end
+            render json: showlist
         end
 
         #POST
         def create
-            showlist = Showlist.create(user_id: session[:user.id], show_id: params[:show_id])
+            showlist = Showlist.create(user_id: session[:user_id], show_id: params[:show_id])
             render json: showlist, status: :created
         end
-
-        private
-        def showlist_params
-            params.permit(:show_id)
-        end
-
 
 end

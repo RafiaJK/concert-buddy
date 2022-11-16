@@ -29,8 +29,8 @@ Rails.application.routes.draw do
 
   #get "/shows", to: " "
 
-  get "/shows", to: "showlists#create"
   get "/showlists", to: "showlists#show"
+  post "users/showlists", to: "showlists#create"
 
   get "/artists", to: "artists#show"
 

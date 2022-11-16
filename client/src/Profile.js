@@ -5,8 +5,8 @@ import UserContext from "./UserContext";
 
 function Profile() {
     const {user, setUser} = useContext(UserContext) 
-    const [contact, setContact] = useState({})
 
+    const [contact, setContact] = useState({})
     useEffect(() => {
       fetch(`users/${contact.id}`) 
           .then((r) => r.json())
@@ -24,6 +24,20 @@ function Profile() {
         method: "DELETE" })
         history.push('/signup')
     }
+
+    // const [myShows, setMyShows] = useState([])
+    // useEffect(() => {
+    //   fetch(`users/showlists`) 
+    //       .then((r) => r.json())
+    //       .then((data) => {
+    //         setMyShows(data)
+    //       });
+    //   }, []);
+
+      // console.log(myShows.showlists)
+      //console.log(user.shows)
+
+    console.log(user)
 
     return (
         <div>

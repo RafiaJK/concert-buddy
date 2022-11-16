@@ -43,7 +43,6 @@ function ContactForm({updateContacts, addContact}) {
     }
 
     const [contacts, setContacts] = useState([])
-
     function updateContacts(newContact) {
         const contactToAdd = { ...newContact, id: updateContacts.length + 1 }
         setContacts([...contacts], contactToAdd)
