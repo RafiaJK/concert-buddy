@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:index, :show, :create, :edit, :destroy]
   resources :artists
   resources :users
+  resources :showlists
 
   get '*path',
   to: 'fallback#index',
