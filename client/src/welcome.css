@@ -1,0 +1,187 @@
+.welcome-logo{
+position:absolute;
+
+width:auto;
+height: 30%;
+min-height: 250px;
+
+left: 870px;
+right: 9.93%;
+top: 144px;
+bottom: 67.09%;
+
+content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-expanded.png);
+}
+
+.welcome-to{
+position: absolute;
+width: 209px;
+height: 49px;
+left: 992px;
+top: 95px;
+
+font-family: 'Manrope';
+font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 49px;
+
+color: #FFFFFF;
+}
+
+.welcome-next-event{
+position: absolute;
+width: 359px;
+height: 26px;
+left: 917px;
+top: 346px;
+
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.welcome-join{
+
+position: absolute;
+width: 439px;
+height: 52px;
+left: 150px;
+top: 204px;
+
+font-family: 'Space Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.contact-bio{
+box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 11px 0px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 44px;
+left: 159px;
+top: 302px;
+
+border-bottom: 1px solid #E0E0E0;
+}
+
+.contact-photo{
+
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 0px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 430px;
+    height: 48px;
+    left: 159px;
+    top: 365px;
+    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.contact-email{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 0px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 430px;
+    height: 48px;
+    left: 155px;
+    top: 428px;
+    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.contact-insta{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 0px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 430px;
+    height: 48px;
+    left: 155px;
+    top: 491px;
+    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.contact-twitter{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 0px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 430px;
+    height: 48px;
+    left: 155px;
+    top: 556px;
+    
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.contact-submit{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 20px 36px;
+gap: 8px;
+
+position: absolute;
+width: 430px;
+height: 60px;
+left: 149px;
+top: 636px;
+
+background: #060606;
+border-radius: 6px;
+color:white;
+font-size: large;
+}

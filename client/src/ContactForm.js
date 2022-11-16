@@ -52,12 +52,12 @@ function ContactForm({updateContacts, addContact}) {
         <div className="contact-form">
             <h2></h2>
             <form onSubmit={addContact}>
-                 <input onChange={handleChange} value={formInput.bio} type="text" name="bio" placeholder="Bio" />
-                 <input onChange={handleChange} value={formInput.photo} type="text" name="photo" placeholder="photo" />
-                <input onChange={handleChange} value={formInput.email} type="text" name="email" placeholder="Email" />
-                <input onChange={handleChange} value={formInput.instagram} type="text" name="instagram" placeholder="Instagram" />
-                <input onChange={handleChange} value={formInput.twitter} type="text" name="twitter" placeholder="Twitter" />
-                <button type="submit">Submit</button>
+                <input className="contact-bio" onChange={handleChange} value={formInput.bio} type="text" name="bio" placeholder="Bio" />
+                <input className="contact-photo" onChange={handleChange} value={formInput.photo} type="text" name="photo" placeholder="Photo" />
+                <input className="contact-email" onChange={handleChange} value={formInput.email} type="text" name="email" placeholder="Email" />
+                <input className="contact-insta" onChange={handleChange} value={formInput.instagram} type="text" name="instagram" placeholder="Instagram" />
+                <input className="contact-twitter" onChange={handleChange} value={formInput.twitter} type="text" name="twitter" placeholder="Twitter" />
+                <button className="contact-submit" type="submit">Submit</button>
             </form>
         </div>
 
