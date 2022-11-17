@@ -1,3 +1,7 @@
+.login{
+    overflow: auto;
+}
+
 .welcome-logo{
 position:absolute;
 
@@ -7,7 +11,7 @@ min-height: 250px;
 
 left: 870px;
 right: 9.93%;
-top: 144px;
+top: 140px;
 bottom: 67.09%;
 
 content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-expanded.png);
@@ -18,7 +22,7 @@ position: absolute;
 width: 209px;
 height: 49px;
 left: 992px;
-top: 95px;
+top: 100px;
 
 font-family: 'Manrope';
 font-style: normal;

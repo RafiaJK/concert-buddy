@@ -13,6 +13,7 @@ import UserContext from './UserContext';
 import UsernameContext from './UsernameContext';
 import PasswordContext from './PasswordContext';
 import UserShowlistCard from './UserShowlistCard';
+import Home from './Home';
 
 function App() {
   const [user, setUser] = useState("")
@@ -63,6 +64,7 @@ function App() {
             <Switch>
 
               <Route exact path="/">
+                <Home/>
               </Route>
 
               <Route path="/profile">

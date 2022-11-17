@@ -1,4 +1,6 @@
 .signup{
+    overflow: auto;
+
     color:white;
     position: fixed;
     min-height: 100%;

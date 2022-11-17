@@ -9,7 +9,7 @@ function UserShowlistCard({ show, showlist }) {
   return (
     <li className="card">
       <h3>{venue}</h3>
-      <img src={show.artist.image} alt={"Artist Photo"} />
+      {/* <img src={show.artist.image} alt={"Artist Photo"} /> */}
       <h2>{show.artist.name}</h2>
       <h4>{date}</h4>    
     </li>

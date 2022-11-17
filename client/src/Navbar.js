@@ -20,7 +20,7 @@ function Navbar() {
   return (
     <div className="navbg">
     <div className="navbar">
-    <div className="navlogo"></div>
+    {/* <div className="navlogo"></div> */}
 
     <header>
         <br/>
@@ -29,7 +29,7 @@ function Navbar() {
         <>
           <button className="logoutbutton" onClick={handleLogoutClick}>Logout</button>
           <nav>
-          <Link to="/">Home </Link>
+          <Link className="navlogo" to="/">Home </Link>
           <Link className="myprofilelink" to="/profile">My Profile </Link>
           <Link className="artistslink" to="/artists">Artists </Link>
           <Link className="findshowslink" to="/shows">Find A Show </Link>
