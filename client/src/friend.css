@@ -1,0 +1,21 @@
+.friend-card {
+    margin: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    height:260px;
+    width: 300px;
+    overflow: auto;
+  
+    color: rgb(19, 14, 10);
+    background-color: rgb(255, 218, 153);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  .friend-card:hover {
+    box-shadow: 0 12px 16px 0 rgba(46, 22, 1, 0.912), 0 17px 50px 0 rgb(255, 218, 153);
+  }
+
+  .friend-card h2 {
+    background-color: #481D11;
+    color:white;
+  }

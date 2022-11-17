@@ -41,6 +41,8 @@ Artist.create(name: "A Day To Remember", image: "https://static.spin.com/files/f
 Artist.create(name: "Yung Gravy", image: "https://images.squarespace-cdn.com/content/v1/5bbbf769fd679359977477ee/1602875307664-CCD45CVL5Q0FRWE90I9D/yg1.jpg")
 Artist.create(name: "Brett Eldredge", image: "https://www.travelandleisure.com/thmb/MUEw15fZIt8mbbaFwHdCf-cXjSU=/1600x1200/smart/filters:no_upscale()/brett-eldredge-BEQA0820-fc85170f5ed540f0a1c53b58e303144e.jpg")
 Artist.create(name:"The Maine", image: "https://upload.wikimedia.org/wikipedia/commons/b/bc/Themaineinthedesert2020.jpg")
+Artist.create(name:"Diplo", image: "https://media.gq.com/photos/5e176887bc5c190008525101/master/pass/diplo-gq-february-2020-02.jpg")
+Artist.create(name: "Daddy Yankee", image: "https://www.rollingstone.com/wp-content/uploads/2022/03/Daddy-Yankee-credit-Issac-Reyes.jpg?w=1581&h=1054&crop=1")
 
 Show.create(venue: "Terminal 5", date: "2022-12-01", artist_id: 1)
 Show.create(venue:"Terminal 5", date: "2022-11-18", artist_id: 13)
@@ -53,6 +55,8 @@ Show.create(venue: "Webster Hall", date: "2022-12-03", artist_id: 7)
 Show.create(venue:"Bowery Ballroom", date:"2022-12-13", artist_id: 6)
 Show.create(venue:"Beacon Theater", date:"2022-12-10", artist_id: 14)
 Show.create(venue:"Mulcahy's Pub and Concert Hall", date: "2022-12-07", artist_id: 11)
+Show.create(venue: "Nebula", date: "2022-12-08", artist_id: 16)
+Show.create(venue: "UBS Arena", date: "2022-12-09", artist_id: 17)
 
 Showlist.create(user_id: 1, show_id: 1)
 Showlist.create(user_id: 1, show_id: 2)
@@ -60,9 +64,7 @@ Showlist.create(user_id: 1, show_id: 3)
 Showlist.create(user_id: 1, show_id: 4)
 Showlist.create(user_id: 6, show_id: 4)
 
-User.create(username: "Rafia", password_digest: "r")
-User.create(username: "Bella", password_digest: "taylor")
-User.create(username: "Leona", password_digest: "strawberry")
+User.create(username: "test", password_digest: "t")
 
 Contact.create(user_id: 1, bio: "hi", photo: "", email: "rafiajk@aol.com", instagram: "rafiajk", twitter: "rafiajkay")
 

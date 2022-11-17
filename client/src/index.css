@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
     color:white;
-    position: fixed;
+    /* position: fixed; */
     min-height: 100%;
     min-width:1024px;
     width: 100%;
@@ -28,7 +28,6 @@ code {
 
 .cards {
   list-style: none;
-
 }
 
 .card {
@@ -63,7 +62,8 @@ code {
   max-height: 180px
 }
 
-.cards-container{
+.show-container{
+  max-height: 700px;
   overflow: auto;
 }
 
@@ -100,3 +100,5 @@ code {
 @import "navbar.css";
 
 @import "profile.css";
+
+@import "friend.css";

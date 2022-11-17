@@ -76,6 +76,21 @@ transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     color: rgb(255, 236, 205);
 }
 
+.connectlink{
+position: absolute;
+width: 208px;
+height: 64px;
+left: 751px;
+top: 10px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 44px;
+
+color: #FFFFFF;
+}
+
 .logoutbutton{
     display: flex;
     flex-direction: row;

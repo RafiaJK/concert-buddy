@@ -18,27 +18,6 @@ function UserShowlistContainer({ showlists, shows }) {
             })
     }, [])
 
-    //see if i can do myshows within the setList
-
-
-    //console.log(myshows)
-
-    //see if i can do something similar to profile where we check for undefined first
-
-    // const listItems = list.map(
-    //     (element) => {
-    //         return (
-    //             <ul type="disc">
-    //                 <li>{element.date}</li>
-    //                 <li>{element.venue}</li>
-    //                 <li>{element.artist.name}</li>
-    //             </ul>
-    //         )
-    //     }
-    // )
-
-    console.log(list)
-
     const myShows = list.map((show) => {
         // return <UserShowlistCard key={show.id} show={show} />
         return ( 
@@ -46,11 +25,12 @@ function UserShowlistContainer({ showlists, shows }) {
 
         <li>{show.date}</li>
         {/* <li>{show.artist_id}</li> */}
-        <li>{show.venue}</li>
+        <li>@{show.venue}</li>
         {/* <button>REMOVE</button> */}
         </ul>
         )
     })
+
 
     return (
         <div className="my-shows">

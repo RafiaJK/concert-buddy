@@ -1,13 +1,17 @@
 import { Link } from "react-router-dom";
-import {useContext} from 'react'
+import {useContext } from 'react'
 import UserContext from './UserContext'
+import {useHistory} from "react-router-dom"
 
 function Navbar() {
 
   const {user, setUser} = useContext(UserContext) 
 
+  const history = useHistory();
+
 
     function handleLogoutClick() {
+      history.push('/login');
       fetch("/logout", { 
         method: "DELETE" })
       .then((r) => {
@@ -20,7 +24,6 @@ function Navbar() {
   return (
     <div className="navbg">
     <div className="navbar">
-    {/* <div className="navlogo"></div> */}
 
     <header>
         <br/>
@@ -33,6 +36,7 @@ function Navbar() {
           <Link className="myprofilelink" to="/profile">My Profile </Link>
           <Link className="artistslink" to="/artists">Artists </Link>
           <Link className="findshowslink" to="/shows">Find A Show </Link>
+          <Link className="connectlink" to="/friends"> Connect </Link>
             </nav>
         </> 
         ) : (

@@ -14,6 +14,7 @@ import UsernameContext from './UsernameContext';
 import PasswordContext from './PasswordContext';
 import UserShowlistCard from './UserShowlistCard';
 import Home from './Home';
+import FindFriends from './FindFriends';
 
 function App() {
   const [user, setUser] = useState("")
@@ -42,6 +43,13 @@ function App() {
     fetch("/shows")
     .then((r)=>r.json())
     .then(setShows);
+  }, [])
+
+  const [friends, setFriends] = useState([])
+  useEffect (() => { 
+    fetch("/contacts")
+    .then((r)=>r.json())
+    .then(setFriends);
   }, [])
 
   // const [showlists, setShowlists] = useState([])
@@ -85,6 +93,10 @@ function App() {
 
               <Route exact path="/welcome">
                 <Welcome/>
+              </Route>
+
+              <Route exact path="/friends">
+                <FindFriends friends={friends}/>
               </Route>
 
               <Route exact path="/showlists">
