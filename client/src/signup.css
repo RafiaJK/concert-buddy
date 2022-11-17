@@ -20,7 +20,7 @@
 
     left: 11.88%;
     right: 60.35%;
-    top: 144px;
+    top: 104px;
     bottom: 171px;
 content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-expanded.png);
 }
@@ -30,7 +30,7 @@ content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/con
     width: 269px;
     height: 49px;
     left: 1007px;
-    top: 191px;
+    top: 151px;
     
     font-family: 'Manrope';
     font-style: normal;
@@ -54,7 +54,7 @@ position: absolute;
 width: 430px;
 height: 48px;
 left: 939px;
-top: 452px;
+top: 350px;
 border-bottom: 1px solid #E0E0E0;
 }
 
@@ -71,7 +71,7 @@ position: absolute;
 width: 430px;
 height: 48px;
 left: 939px;
-top: 515px;
+top: 410px;
 border-bottom: 1px solid #E0E0E0;
 }
 
@@ -88,7 +88,7 @@ position: absolute;
 width: 430px;
 height: 48px;
 left: 935px;
-top: 578px;
+top: 470px;
 
 border-bottom: 1px solid #E0E0E0;
 }
@@ -105,7 +105,7 @@ position: absolute;
 width: 430px;
 height: 60px;
 left: 939px;
-top: 705px;
+top: 550px;
 
 background: #060606;
 color: white;
@@ -125,5 +125,5 @@ font-size: large;
     width: 297px;
     height: 20px;
     left: 998px;
-    top: 781px;
+    top: 600px;
 }

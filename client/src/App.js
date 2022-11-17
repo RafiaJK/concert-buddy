@@ -63,6 +63,10 @@ function App() {
           {user ? ( 
             <Switch>
 
+              <Route exact path="/home">
+                <Home/>
+              </Route>
+
               <Route exact path="/">
                 <Home/>
               </Route>
@@ -89,6 +93,11 @@ function App() {
             </Switch>
           ) : (
             <Switch>
+
+              <Route exact path="/">
+                <SignUp setUser={setUser}/>
+              </Route>
+
               <Route exact path="/signup">
                 <SignUp setUser={setUser}/>
               </Route>

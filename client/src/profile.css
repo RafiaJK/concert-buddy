@@ -1,0 +1,140 @@
+.profile-info{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 130px;
+    top: 120px;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+
+    overflow: auto;
+}
+
+.whole-profile h2{
+    font-size: 22px;
+    color: #FFDE59;
+    text-align: center;
+}
+.profile-info h3{
+    font-size: 18px;
+}
+
+.profile-container{
+    position: absolute;
+    width: 560px;
+    height: 280px;
+    left: 80px;
+    top: 104px;
+    
+    background: #210909;
+    opacity: 0.4;
+    border-radius: 50px;
+}
+
+.myshows-container{
+position: absolute;
+width: 560px;
+height: 320px;
+left: 780px;
+top: 104px;
+
+background: #210909;
+opacity: 0.4;
+border-radius: 50px;
+
+}
+
+.myshows-info{
+    position: absolute;
+    width: 500px;
+    height: 280px;
+    left: 830px;
+    top: 120px;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+    
+    overflow: auto;
+}
+
+.update-profile-container{
+    position: absolute;
+    width: 560px;
+    height: 280px;
+    left: 80px;
+    top: 404px;
+    
+    background: #210909;
+    opacity: 0.4;
+    border-radius: 50px;
+}
+
+.update-profile-form{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 130px;
+    top: 424px;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+}
+
+.delete-user-container{
+position: absolute;
+width: 560px;
+height: 194px;
+left: 780px;
+top: 448px;
+
+background: #210909;
+opacity: 0.4;
+border-radius: 50px;
+}
+
+.delete-function{
+    position: absolute;
+    width: 500px;
+    height: auto;
+    left: 830px;
+    top: 450px;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px;
+    
+    color: #FFFFFF;
+}
+
+.delete-function button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px 26px;
+gap: 8px;
+
+position: absolute;
+width: 200px;
+height: auto;
+left: 130px;
+top: 110px;
+
+background: #770202;
+color: white;
+font-size: medium;
+border-radius: 40px;
+}
+.delete-function button:hover{
+    background-color:#210909
+}

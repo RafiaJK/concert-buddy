@@ -8,7 +8,9 @@ function ShowContainer({shows}) {
     })
 
     return (
+        <div className="cards-container">
         <ul className="cards">{showComponents}</ul>
+        </div>
     );
 
 }
