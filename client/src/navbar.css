@@ -1,0 +1,97 @@
+.navbg{
+position: absolute;
+width: 2040px;
+height: 68px;
+left: 0px;
+top: 0px;
+background: rgba(160, 61, 30, 0.32);
+}
+
+.navlogo{
+position: absolute;
+width: 250px;
+height: auto;
+left: 20px;
+top: -35px;
+
+content: url(/Users/rafiakhandaker/Development/code/phase-5/p5-concert-buddy/concert-buddy/client/src/logo-simple.png);
+}
+
+.myprofilelink{
+position: absolute;
+width: 208px;
+height: 64px;
+left: 951px;
+top: 10px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 44px;
+
+color: #FFFFFF;
+}
+
+.myprofilelink:hover{
+    color: rgb(255, 236, 205);
+}
+
+.findshowslink{
+position: absolute;
+width: 258px;
+height: 64px;
+left: 197px;
+top: 10px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 44px;
+
+color: #FFFFFF;
+}
+
+.findshowslink:hover{
+    color: rgb(255, 236, 205);
+}
+
+.artistslink{
+position: absolute;
+width: 258px;
+height: 64px;
+left: 459px;
+top: 10px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 44px;
+
+color: #FFFFFF;
+box-shadow: inset 0 0 0 0 #d66354b0;
+transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.artistslink:hover{
+    color: rgb(255, 236, 205);
+}
+
+.logoutbutton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 36px;
+    gap: 8px;
+    
+    position: absolute;
+    width: 201px;
+    height: 50px;
+    left: 1159px;
+    top: 10px;
+    
+    background: #060606;
+    border-radius: 6px;
+    color:white;
+    font-size: large;
+}

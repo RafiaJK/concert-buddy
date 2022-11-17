@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { BrowserRouter, Switch, Route, useHistory } from "react-router-dom";
 import EditContactForm from "./EditContactForm";
 import UserContext from "./UserContext";
+import UserShowlistContainer from "./UserShowlistContainer";
 
-function Profile() {
+function Profile({shows}) {
     const {user, setUser} = useContext(UserContext) 
 
     const [contact, setContact] = useState({})
@@ -14,7 +15,6 @@ function Profile() {
             setContact(data)
           });
       }, []);
-
 
     const {photo, bio, email, instagram, twitter} = contact
 
@@ -34,10 +34,8 @@ function Profile() {
     //       });
     //   }, []);
 
-      // console.log(myShows.showlists)
-      //console.log(user.shows)
-
-    console.log(user)
+      //console.log(user)
+      // console.log(user.shows)
 
     return (
         <div>
@@ -53,7 +51,7 @@ function Profile() {
           <EditContactForm contact={contact}/>
 
               <h3>View Your Shows:</h3>
-
+            <UserShowlistContainer />
               <h4>Delete Your Account</h4>
                 <button onClick={handleDeleteUser}>DELETE</button>
         </div>

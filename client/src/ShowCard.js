@@ -33,7 +33,7 @@ function ShowCard({ show, showlist }) {
     setShowlists([...showlists], showlistToAdd)
 }
 
-console.log(show.showlists)
+// console.log(user.showlists)
 
   return (
     <li className="card">

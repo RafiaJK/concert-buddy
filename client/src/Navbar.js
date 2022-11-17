@@ -18,18 +18,21 @@ function Navbar() {
     }
 
   return (
+    <div className="navbg">
     <div className="navbar">
+    <div className="navlogo"></div>
+
     <header>
         <br/>
 
         {user ? (
         <>
-          <button onClick={handleLogoutClick}>Logout</button>
+          <button className="logoutbutton" onClick={handleLogoutClick}>Logout</button>
           <nav>
           <Link to="/">Home </Link>
-          <Link to="/profile">My Profile </Link>
-          <Link to="/artists">Artists </Link>
-          <Link to="/shows">Find A Show </Link>
+          <Link className="myprofilelink" to="/profile">My Profile </Link>
+          <Link className="artistslink" to="/artists">Artists </Link>
+          <Link className="findshowslink" to="/shows">Find A Show </Link>
             </nav>
         </> 
         ) : (
@@ -38,9 +41,9 @@ function Navbar() {
             <Link to="/login">Login</Link>
           </>
         )}
-
     </header>
-    </div>
+  
+    </div></div>
   );
 }
 

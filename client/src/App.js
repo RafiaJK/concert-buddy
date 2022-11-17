@@ -12,6 +12,7 @@ import Welcome from './Welcome';
 import UserContext from './UserContext';
 import UsernameContext from './UsernameContext';
 import PasswordContext from './PasswordContext';
+import UserShowlistCard from './UserShowlistCard';
 
 function App() {
   const [user, setUser] = useState("")
@@ -65,7 +66,7 @@ function App() {
               </Route>
 
               <Route path="/profile">
-                <Profile/>  
+                <Profile shows={shows}/>  
               </Route>
 
               <Route exact path="/artists">
