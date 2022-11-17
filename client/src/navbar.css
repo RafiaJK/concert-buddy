@@ -110,3 +110,7 @@ color: #FFFFFF;
     color:white;
     font-size: large;
 }
+
+.connectlink:hover{
+    color: rgb(255, 236, 205);
+}

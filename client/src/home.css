@@ -1,0 +1,26 @@
+.homepage{
+position: absolute;
+width: 810px;
+height: 64px;
+left: 267px;
+top: 166px;
+
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 27px;
+
+color: #FFFFFF;
+}
+
+.home-rectangle{
+position: absolute;
+width: 1082px;
+height: 896px;
+left: 188px;
+top: 128px;
+
+background: #210909;
+opacity: 0.4;
+border-radius: 50px;
+}
