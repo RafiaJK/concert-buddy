@@ -5,6 +5,7 @@ import FriendCard from "./FriendCard"
 
 function FindFriends({friends}){
 
+    
     const friendComponents = friends.map((friend) => {
         return <FriendCard key={friend.id} friend={friend} />
     })

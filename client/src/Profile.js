@@ -58,7 +58,7 @@ function Profile({ shows }) {
       <div className="myshows-container"></div>
         <div className="myshows-info">
         <h2>My Upcoming Shows:</h2>
-          <UserShowlistContainer />
+          <UserShowlistContainer shows={shows} />
       </div>
 
       <br></br>

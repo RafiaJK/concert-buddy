@@ -7,7 +7,6 @@ function FriendCard({friend}) {
     const { username, setUsername } = useContext(UsernameContext)
     const { photo, bio, email, instagram, twitter } = friend
 
-
     const [usernames, setUsernames] = useState({})
     useEffect(() => {
       fetch(`/users`)
@@ -17,7 +16,7 @@ function FriendCard({friend}) {
         });
     }, []); 
 
-    console.log(friend.user.username)
+    //console.log(friend.user.username)
 
     return (
         <li className="friend-card">

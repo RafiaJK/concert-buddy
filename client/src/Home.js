@@ -11,6 +11,7 @@ return (
         <br></br>
         <h3>Stay tuned, we have some exciting upcoming features ahead:</h3>
         <li>Follow your favorite artists to find out when they're playing by you.</li>
+        <li>View a show's attendees and connect.</li>
         <li>Search by venue, artist, or date range.</li>
         <li>Add your photo and video memories from shows.</li>
         <li>Expand our shows beyond New York.</li>

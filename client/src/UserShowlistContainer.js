@@ -15,6 +15,7 @@ function UserShowlistContainer({ showlists, shows }) {
             .then((r) => r.json())
             .then((data) => {
                 setList(data.shows)
+                //console.log(data.shows)
             })
     }, [])
 
@@ -24,13 +25,13 @@ function UserShowlistContainer({ showlists, shows }) {
         <ul type="disc">
 
         <li>{show.date}</li>
-        {/* <li>{show.artist_id}</li> */}
+        <li>{show.artist.name}</li>
         <li>@{show.venue}</li>
-        {/* <button>REMOVE</button> */}
+        <button>REMOVE</button>
         </ul>
         )
+       
     })
-
 
     return (
         <div className="my-shows">
