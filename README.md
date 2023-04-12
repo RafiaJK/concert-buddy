@@ -1,24 +1,29 @@
-# README
+# Concert Buddy
+![Logo](/concert-buddy/client/src/logo-expanded.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+View concerts from your favorite artists, add yourself to a list of attendees, and meet fellow concertgoers in New York City.
 
-Things you may want to cover:
 
-* Ruby version
+## Deployment
 
-* System dependencies
+Installation:
+* npm install
 
-* Configuration
+Run JavaScript:
+* npm start --prefix client
 
-* Database creation
+Run Rails server:
+* rails s
 
-* Database initialization
+Visit app:
+* http://localhost:4000/
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Tech Stack
 
-* ...
+**Client:** React, Figma
+
+**Server:** Ruby on Rails
+
+
